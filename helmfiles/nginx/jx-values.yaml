@@ -33,16 +33,20 @@ jxRequirements:
     registry: ghcr.io
   environments:
   - key: dev
+    owner: zhangyile
+    repository: test-cd
   - key: staging
   - key: production
   ingress:
-    domain: change.me
+    domain: matrix.infra
     kind: ingress
     namespaceSubDomain: -nginx.
     tls:
       email: ""
       enabled: false
       production: false
+  pipelineUser:
+    username: zhangyile
   repository: bucketrepo
   secretStorage: local
   vault: {}
